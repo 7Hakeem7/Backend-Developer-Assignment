@@ -1,0 +1,57 @@
+/* src/pages/Home.css */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;/* Adjust to account for header and footer */
+  text-align: center;
+  background-color: rgb(0, 49, 69);
+  padding-bottom: 20px; /* Space above footer */
+}
+
+.text-animation h1 {
+  font-size: 3rem;
+  color: #fff; /* Adjusted for better contrast */
+  animation: fadeIn 2s ease-in-out;
+}
+
+.text-animation p {
+  font-size: 1.5rem;
+  color: #ccc; /* Adjusted for better contrast */
+  margin-top: 1rem;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.chat-button {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chat-button:hover {
+  background-color: #0056b3;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Ensures footer is always at the bottom */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+}

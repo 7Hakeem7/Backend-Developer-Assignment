@@ -1,0 +1,65 @@
+/* src/styles/QueryNLP.css */
+
+.query-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .query-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .query-form label {
+    font-weight: bold;
+  }
+  
+  .query-form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .query-form button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .query-form button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .query-form button:hover {
+    background-color: #45a049;
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .query-response {
+    margin-top: 20px;
+  }
+  
+  .query-response h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .query-response p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
