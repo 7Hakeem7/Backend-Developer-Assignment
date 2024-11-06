@@ -20,11 +20,11 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="text-animation">
-        <h1>Welcome to AI Planet's Document Assistant</h1>
+        <h1>Huge thanks to Team AI Planet for this amazing opportunity!</h1>
         <p>Your one-stop solution for intelligent document interaction!</p>
       </div>
       <button className="chat-button" onClick={handleChatButtonClick}>
-        Chat With/Ask Your Document
+        Chat With Your Document
       </button>
     </div>
   );
