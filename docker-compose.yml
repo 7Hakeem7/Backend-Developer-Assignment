@@ -1,0 +1,44 @@
+# version: '3'
+# services:
+#   frontend:
+#     build:
+#       context: ./frontend
+#     ports:
+#       - "3000:3000"
+#     volumes:
+#       - ./frontend:/app
+#     command: npm start
+#   backend:
+#     build:
+#       context: ./app
+#     ports:
+#       - "8000:8000"
+#     volumes:
+#       - ./app:/app
+#     command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+
+version: '3'
+services:
+  backend:
+    build:
+      context: ./app  # Path to your FastAPI backend directory
+    ports:
+      - "8000:8000"  # Expose port 8000 for the backend
+    environment:
+      - UVICORN_HOST=0.0.0.0
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./frontend  # Path to your React frontend directory
+    ports:
+      - "3000:3000"  # Expose port 3000 for the frontend
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
